@@ -25,4 +25,4 @@ Task: "Break your project down into smaller components or features."
 - Buying Guide
 - Reviews
 
-This plan was an assisted effort from chatgpt and i do not take full credit nor do i assume legal ownership
+This plan was an assisted effort from chatgpt and i do not take full credit nor do i assume legal ownership.
