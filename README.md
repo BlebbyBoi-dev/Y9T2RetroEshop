@@ -40,7 +40,7 @@ Task: "Break your project down into smaller components or features."
 - Buying Guide
 - Reviews
 
-AI tools were used for brainstorming and planning in accordance with the task requirements. The final design decisions and implementation are my own work, with the sole exception of this document.
+AI tools were used for brainstorming and planning in accordance with the task requirements. The final design decisions, structure, and implementation have been independently developed by me.
 
 ## Milestones
 - Set up project management tools - 20/04/2026, 9:52 AM
