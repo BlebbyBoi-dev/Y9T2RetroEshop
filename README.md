@@ -1,6 +1,8 @@
 # Y9T2RetroEshop
 An E-Shop for a fictional Retro Gaming Store, for a school project
 
+## [Go try it out!](https://blebbyboi-dev.github.io/Y9T2RetroEshop/)
+
 ## Goal:
 The purpose of this project is to design and develop a user-focused e-commerce website for a retro gaming store. The website will allow users to browse games, view information, and make informed purchasing decisions 
 through structured categories and reviews.
