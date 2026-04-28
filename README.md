@@ -28,6 +28,10 @@ User stories:
 - Sprint 3 (Weeks 5-6): Finish shop page, Build buying guide page, Start Reviews page
 - Sprint 4 (Weeks 7-8): Finalise CSS, Fix bugs, Polish pages, final submission
 
+### KANBAN
+<img width="1115" height="568" alt="image" src="https://github.com/user-attachments/assets/d1ab1f5e-ae26-46c6-8277-ba407ef2cd02" />
+
+
 ## Design Approach
 The website will follow a clean, retro-inspired e-commerce design with a focus on usability, clear navigation, and consistent layout across all pages. The design will prioritise user experience by making categories and 
 products easy to find.
