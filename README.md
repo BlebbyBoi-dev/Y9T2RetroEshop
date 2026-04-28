@@ -44,3 +44,5 @@ AI tools were used for brainstorming and planning in accordance with the task re
 
 ## Milestones
 - Set up project management tools - 20/04/2026, 9:52 AM
+- Created instance 1 of homepage - 28/04/2026, 11:46 AM
+
