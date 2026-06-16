@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+
+<style>
+body {
+    font-family: Arial;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+textarea {
+    height: 300px;
+    font-family: monospace;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🧑‍💻 Guide Admin Panel</h1>
+
+<select id="consoleSelect">
+    <option value="n64">Nintendo 64</option>
+    <option value="ps2">PS2</option>
+    <option value="wii">Wii</option>
+    <option value="gamecube">GameCube</option>
+</select>
+
+<input id="title" placeholder="Title">
+
+<textarea id="content" placeholder="HTML content here..."></textarea>
+
+<button id="loadBtn">Load</button>
+<button id="saveBtn">Save</button>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc
+} from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "y9t2retroeshop.firebaseapp.com",
+  projectId: "y9t2retroeshop",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const select = document.getElementById("consoleSelect");
+const title = document.getElementById("title");
+const content = document.getElementById("content");
+const loadBtn = document.getElementById("loadBtn");
+const saveBtn = document.getElementById("saveBtn");
+
+async function loadGuide() {
+  const id = select.value;
+  const ref = doc(db, "guides", id);
+  const snap = await getDoc(ref);
+
+  if (snap.exists()) {
+    const data = snap.data();
+    title.value = data.title || "";
+    content.value = data.content || "";
+  } else {
+    title.value = "";
+    content.value = "";
+  }
+}
+
+async function saveGuide() {
+  const id = select.value;
+  const ref = doc(db, "guides", id);
+
+  await setDoc(ref, {
+    title: title.value,
+    content: content.value
+  });
+
+  alert("Saved to Firestore 🚀");
+}
+
+loadBtn.addEventListener("click", loadGuide);
+saveBtn.addEventListener("click", saveGuide);
+
+// auto-load when dropdown changes (optional but nice)
+select.addEventListener("change", loadGuide);
+
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+  if (!user || user.email !== "admin@y9t2.com") {
+    window.location.href = "home.html";
+  }
+});
+onAuthStateChanged(auth, async (user) => {
+  if (!user) return;
+
+  const ref = doc(db, "users", user.email);
+  const snap = await getDoc(ref);
+
+  if (snap.exists() && snap.data().role === "admin") {
+    console.log("ADMIN MODE ENABLED 🧑‍💻");
+  } else {
+    console.log("normal user");
+  }
+});
+</script>
+
+</body>
+</html>

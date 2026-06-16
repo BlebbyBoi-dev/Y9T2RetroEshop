@@ -1,4 +1,3 @@
-<!--Shop Page!-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +22,21 @@
     </ul>
 </nav>
 
+<!-- SEARCH -->
+<div class="search-container">
+    <input 
+        type="text" 
+        id="searchBar" 
+        placeholder="Search consoles... (Game Boy, PS2, Sega...)"
+    />
+</div>
+
 <!-- FILTERS -->
 <header>
-    <h1>   Filter</h1>
+    <center>
+    <h1>Filter</h1>
 
-    <div class="filters">
+    <div class="filters" class="center">
 
         <input type="checkbox" id="nintendo" value="nintendo">
         <label for="nintendo">Nintendo</label>
@@ -49,229 +58,504 @@
 
         <input type="checkbox" id="home" value="home">
         <label for="home">Home Console</label>
-
+    </center>
     </div>
 </header>
 
+<!-- STORE -->
 <main class="store-grid">
 
 <!-- NINTENDO -->
-<a href="shop.html#colortvgame" class="game-card nintendo home">
-    <img src="images/colortvgame.png" alt="Color TV-Game">
+<a class="game-card nintendo home"
+   data-title="Color TV-Game (1977)"
+   data-img="images/colortvgame.png"
+   data-price="$59.99"
+   data-desc="Nintendo’s first console. Simple built-in games that started a legacy.">
+    <img src="images/colortvgame.png">
     <h4>Color TV-Game (1977)</h4>
 </a>
 
-<a href="shop.html#gameandwatch" class="game-card nintendo handheld">
-    <img src="images/gameandwatch.png" alt="Game & Watch">
+<a class="game-card nintendo handheld"
+   data-title="Game & Watch (1980)"
+   data-img="images/gameandwatch.png"
+   data-price="$39.99"
+   data-desc="Portable LCD mini-games that defined handheld gaming before the Game Boy.">
+    <img src="images/gameandwatch.png">
     <h4>Game & Watch (1980)</h4>
 </a>
 
-<a href="shop.html#nes" class="game-card nintendo home">
-    <img src="images/NES.png" alt="NES Console">
+<a class="game-card nintendo home"
+   data-title="NES (1983)"
+   data-img="images/NES.png"
+   data-price="$129.99"
+   data-desc="The console that revived the gaming industry with classics like Mario and Zelda.">
+    <img src="images/NES.png">
     <h4>NES (1983)</h4>
 </a>
 
-<a href="shop.html#gameboy" class="game-card nintendo handheld">
-    <img src="images/gameboy.png" alt="Game Boy">
+<a class="game-card nintendo handheld"
+   data-title="Game Boy (1989)"
+   data-img="images/gameboy.png"
+   data-price="$89.99"
+   data-desc="A legendary handheld console that made gaming portable worldwide.">
+    <img src="images/gameboy.png">
     <h4>Game Boy (1989)</h4>
 </a>
 
-<a href="shop.html#snes" class="game-card nintendo home">
-    <img src="images/SNES.png" alt="SNES">
+<a class="game-card nintendo home"
+   data-title="SNES (1990)"
+   data-img="images/SNES.png"
+   data-price="$149.99"
+   data-desc="16-bit perfection with some of the best platformers ever made.">
+    <img src="images/SNES.png">
     <h4>SNES (1990)</h4>
 </a>
 
-<a href="shop.html#n64" class="game-card nintendo home">
-    <img src="images/n64.jpg" alt="Nintendo 64">
+<a class="game-card nintendo home"
+   data-title="Nintendo 64 (1996)"
+   data-img="images/n64.jpg"
+   data-price="$179.99"
+   data-desc="The leap into 3D gaming with iconic titles like Mario 64 and Zelda Ocarina of Time.">
+    <img src="images/n64.jpg">
     <h4>Nintendo 64 (1996)</h4>
 </a>
 
-<a href="shop.html#gameboycolor" class="game-card nintendo handheld">
-    <img src="images/gameboycolor.png" alt="Game Boy Color">
+<a class="game-card nintendo handheld"
+   data-title="Game Boy Color (1998)"
+   data-img="images/gameboycolor.png"
+   data-price="$99.99"
+   data-desc="The Game Boy, now in full color. Portable gaming leveled up.">
+    <img src="images/gameboycolor.png">
     <h4>Game Boy Color (1998)</h4>
 </a>
 
-<a href="shop.html#gamecube" class="game-card nintendo home">
-    <img src="images/gamecube.png" alt="GameCube">
+<a class="game-card nintendo home"
+   data-title="GameCube (2001)"
+   data-img="images/gamecube.png"
+   data-price="$129.99"
+   data-desc="Compact cube console with some of Nintendo’s most beloved multiplayer games.">
+    <img src="images/gamecube.png">
     <h4>GameCube (2001)</h4>
 </a>
 
-<a href="shop.html#gba" class="game-card nintendo handheld">
-    <img src="images/gba.png" alt="Game Boy Advance">
+<a class="game-card nintendo handheld"
+   data-title="Game Boy Advance (2001)"
+   data-img="images/gba.png"
+   data-price="$109.99"
+   data-desc="A powerful handheld with SNES-level graphics on the go.">
+    <img src="images/gba.png">
     <h4>Game Boy Advance (2001)</h4>
 </a>
 
-<a href="shop.html#nds" class="game-card nintendo handheld">
-    <img src="images/ds.png" alt="Nintendo DS">
+<a class="game-card nintendo handheld"
+   data-title="Nintendo DS (2004)"
+   data-img="images/ds.png"
+   data-price="$119.99"
+   data-desc="Dual screens, touch controls, and endless innovation in your pocket.">
+    <img src="images/ds.png">
     <h4>Nintendo DS (2004)</h4>
 </a>
 
-<a href="shop.html#wii" class="game-card nintendo home">
-    <img src="images/wii.png" alt="Wii">
+<a class="game-card nintendo home"
+   data-title="Wii (2006)"
+   data-img="images/wii.png"
+   data-price="$149.99"
+   data-desc="Motion-controlled fun that brought gaming to everyone.">
+    <img src="images/wii.png">
     <h4>Wii (2006)</h4>
 </a>
 
-<a href="shop.html#n3ds" class="game-card nintendo handheld">
-    <img src="images/3ds.png" alt="Nintendo 3DS">
+<a class="game-card nintendo handheld"
+   data-title="Nintendo 3DS (2011)"
+   data-img="images/3ds.png"
+   data-price="$139.99"
+   data-desc="Portable 3D gaming without glasses, packed with classics.">
+    <img src="images/3ds.png">
     <h4>Nintendo 3DS (2011)</h4>
 </a>
 
-<a href="shop.html#wiiu" class="game-card nintendo home">
-    <img src="images/wiiu.png" alt="Wii U">
+<a class="game-card nintendo home"
+   data-title="Wii U (2012)"
+   data-img="images/wiiu.png"
+   data-price="$159.99"
+   data-desc="The underrated console that introduced the GamePad concept.">
+    <img src="images/wiiu.png">
     <h4>Wii U (2012)</h4>
 </a>
 
 <!-- SEGA -->
-<a href="shop.html#sg1000" class="game-card sega home">
-    <img src="images/sg1000.png" alt="SG-1000">
+<a class="game-card sega home"
+   data-title="SG-1000 (1983)"
+   data-img="images/sg1000.png"
+   data-price="$79.99"
+   data-desc="SEGA’s first console entry into the home gaming market.">
+    <img src="images/sg1000.png">
     <h4>SG-1000 (1983)</h4>
 </a>
 
-<a href="shop.html#mastersystem" class="game-card sega home">
-    <img src="images/mastersystem.png" alt="Master System">
+<a class="game-card sega home"
+   data-title="Master System (1985)"
+   data-img="images/mastersystem.png"
+   data-price="$99.99"
+   data-desc="A strong competitor to the NES with colorful 8-bit adventures.">
+    <img src="images/mastersystem.png">
     <h4>Master System (1985)</h4>
 </a>
 
-<a href="shop.html#megadrive" class="game-card sega home">
-    <img src="images/megadrive.png" alt="Mega Drive">
+<a class="game-card sega home"
+   data-title="Mega Drive (1988)"
+   data-img="images/megadrive.png"
+   data-price="$129.99"
+   data-desc="Also known as Genesis — home of Sonic the Hedgehog.">
+    <img src="images/megadrive.png">
     <h4>Mega Drive (1988)</h4>
 </a>
 
-<a href="shop.html#gamegear" class="game-card sega handheld">
-    <img src="images/gamegear.png" alt="Game Gear">
+<a class="game-card sega handheld"
+   data-title="Game Gear (1990)"
+   data-img="images/gamegear.png"
+   data-price="$89.99"
+   data-desc="SEGA’s colorful handheld rival to the Game Boy.">
+    <img src="images/gamegear.png">
     <h4>Game Gear (1990)</h4>
 </a>
 
-<a href="shop.html#segacd" class="game-card sega home">
-    <img src="images/megacd.png" alt="Sega-CD">
-    <h4>Mega-CD (1991)</h4>
+<a class="game-card sega home"
+   data-title="Sega-CD (1991)"
+   data-img="images/megacd.png"
+   data-price="$149.99"
+   data-desc="CD-based upgrade bringing cinematic experiences to SEGA games.">
+    <img src="images/megacd.png">
+    <h4>Sega-CD (1991)</h4>
 </a>
 
-<a href="shop.html#32x" class="game-card sega home">
-    <img src="images/32x.png" alt="32X">
+<a class="game-card sega home"
+   data-title="32X (1994)"
+   data-img="images/32x.png"
+   data-price="$79.99"
+   data-desc="A bold but short-lived attempt to upgrade the Genesis.">
+    <img src="images/32x.png">
     <h4>32X (1994)</h4>
 </a>
 
-<a href="shop.html#saturn" class="game-card sega home">
-    <img src="images/saturn.png" alt="Saturn">
+<a class="game-card sega home"
+   data-title="Saturn (1994)"
+   data-img="images/saturn.png"
+   data-price="$139.99"
+   data-desc="Powerful but complex console with strong arcade roots.">
+    <img src="images/saturn.png">
     <h4>Saturn (1994)</h4>
 </a>
 
-<a href="shop.html#dreamcast" class="game-card sega home">
-    <img src="images/dreamcast.png" alt="Dreamcast">
+<a class="game-card sega home"
+   data-title="Dreamcast (1998)"
+   data-img="images/dreamcast.png"
+   data-price="$159.99"
+   data-desc="SEGA’s final console — ahead of its time and beloved today.">
+    <img src="images/dreamcast.png">
     <h4>Dreamcast (1998)</h4>
 </a>
 
 <!-- ATARI -->
-<a href="shop.html#pong" class="game-card atari home">
-    <img src="images/pong.png" alt="Pong">
+<a class="game-card atari home"
+   data-title="Pong (1975)"
+   data-img="images/pong.png"
+   data-price="$49.99"
+   data-desc="The game that started home console gaming. Simple paddle fun.">
+    <img src="images/pong.png">
     <h4>Pong (1975)</h4>
 </a>
 
-<a href="shop.html#atari2600" class="game-card atari home">
-    <img src="images/atari2600.png" alt="Atari 2600">
+<a class="game-card atari home"
+   data-title="Atari 2600 (1977)"
+   data-img="images/atari2600.png"
+   data-price="$99.99"
+   data-desc="One of the most iconic early home consoles ever released.">
+    <img src="images/atari2600.png">
     <h4>Atari 2600 (1977)</h4>
 </a>
 
-<a href="shop.html#atari5200" class="game-card atari home">
-    <img src="images/atari5200.png" alt="Atari 5200">
+<a class="game-card atari home"
+   data-title="Atari 5200 (1982)"
+   data-img="images/atari5200.png"
+   data-price="$109.99"
+   data-desc="A more powerful but less successful Atari follow-up.">
+    <img src="images/atari5200.png">
     <h4>Atari 5200 (1982)</h4>
 </a>
 
-<a href="shop.html#atari7800" class="game-card atari home">
-    <img src="images/atari7800.png" alt="Atari 7800">
+<a class="game-card atari home"
+   data-title="Atari 7800 (1986)"
+   data-img="images/atari7800.png"
+   data-price="$119.99"
+   data-desc="Backward-compatible console trying to revive Atari’s dominance.">
+    <img src="images/atari7800.png">
     <h4>Atari 7800 (1986)</h4>
 </a>
 
-<a href="shop.html#atarilynx" class="game-card atari handheld">
-    <img src="images/atarilynx.png" alt="Atari Lynx">
+<a class="game-card atari handheld"
+   data-title="Atari Lynx (1989)"
+   data-img="images/atarilynx.png"
+   data-price="$129.99"
+   data-desc="A powerful color handheld that was ahead of its time.">
+    <img src="images/atarilynx.png">
     <h4>Atari Lynx (1989)</h4>
 </a>
 
-<a href="shop.html#atarijaguar" class="game-card atari home">
-    <img src="images/atarijaguar.png" alt="Atari Jaguar">
+<a class="game-card atari home"
+   data-title="Atari Jaguar (1993)"
+   data-img="images/atarijaguar.png"
+   data-price="$149.99"
+   data-desc="Marketed as 64-bit — bold but commercially unsuccessful.">
+    <img src="images/atarijaguar.png">
     <h4>Atari Jaguar (1993)</h4>
 </a>
 
 <!-- PLAYSTATION -->
-<a href="shop.html#ps1" class="game-card playstation home">
-    <img src="images/ps1.png" alt="PlayStation">
-    <h4>PlayStation (1994)</h4>
+<a class="game-card playstation home"
+   data-title="PS1 (1994)"
+   data-img="images/ps1.png"
+   data-price="$149.99"
+   data-desc="Sony’s breakthrough console that dominated 3D gaming.">
+    <img src="images/ps1.png">
+    <h4>PS1 (1994)</h4>
 </a>
 
-<a href="shop.html#ps2" class="game-card playstation home">
-    <img src="images/ps2.png" alt="PS2">
-    <h4>PlayStation 2 (2000)</h4>
+<a class="game-card playstation home"
+   data-title="PS2 (2000)"
+   data-img="images/ps2.png"
+   data-price="$199.99"
+   data-desc="The best-selling console of all time with massive game library.">
+    <img src="images/ps2.png">
+    <h4>PS2 (2000)</h4>
 </a>
 
-<a href="shop.html#psp" class="game-card playstation handheld">
-    <img src="images/psp.png" alt="PSP">
+<a class="game-card playstation handheld"
+   data-title="PSP (2004)"
+   data-img="images/psp.png"
+   data-price="$129.99"
+   data-desc="Portable PlayStation with console-quality games on the go.">
+    <img src="images/psp.png">
     <h4>PSP (2004)</h4>
 </a>
 
-<a href="shop.html#ps3" class="game-card playstation home">
-    <img src="images/ps3.png" alt="PS3">
+<a class="game-card playstation home"
+   data-title="PS3 (2006)"
+   data-img="images/ps3.png"
+   data-price="$179.99"
+   data-desc="Blu-ray gaming powerhouse with legendary exclusives.">
+    <img src="images/ps3.png">
     <h4>PS3 (2006)</h4>
 </a>
 
-<a href="shop.html#psvita" class="game-card playstation handheld">
-    <img src="images/psvita.png" alt="PS Vita">
+<a class="game-card playstation handheld"
+   data-title="PS Vita (2011)"
+   data-img="images/psvita.png"
+   data-price="$139.99"
+   data-desc="Beautiful handheld console with underrated game library.">
+    <img src="images/psvita.png">
     <h4>PS Vita (2011)</h4>
 </a>
 
-<a href="shop.html#ps4" class="game-card playstation home">
-    <img src="images/ps4.png" alt="PS4">
+<a class="game-card playstation home"
+   data-title="PS4 (2013)"
+   data-img="images/ps4.png"
+   data-price="$199.99"
+   data-desc="Modern gaming era leader with incredible exclusives.">
+    <img src="images/ps4.png">
     <h4>PS4 (2013)</h4>
 </a>
 
 <!-- XBOX -->
-<a href="shop.html#xbox" class="game-card xbox home">
-    <img src="images/xbox.png" alt="Xbox">
+<a class="game-card xbox home"
+   data-title="Xbox (2001)"
+   data-img="images/xbox.png"
+   data-price="$149.99"
+   data-desc="Microsoft’s first console with Halo as its flagship title.">
+    <img src="images/xbox.png">
     <h4>Xbox (2001)</h4>
 </a>
 
-<a href="shop.html#xbox360" class="game-card xbox home">
-    <img src="images/xbox360.png" alt="Xbox 360">
+<a class="game-card xbox home"
+   data-title="Xbox 360 (2005)"
+   data-img="images/xbox360.png"
+   data-price="$179.99"
+   data-desc="Online gaming revolution with Xbox Live dominance.">
+    <img src="images/xbox360.png">
     <h4>Xbox 360 (2005)</h4>
 </a>
 
-<a href="shop.html#xboxone" class="game-card xbox home">
-    <img src="images/xboxone.png" alt="Xbox One">
+<a class="game-card xbox home"
+   data-title="Xbox One (2013)"
+   data-img="images/xboxone.png"
+   data-price="$199.99"
+   data-desc="All-in-one entertainment console with modern gaming focus.">
+    <img src="images/xboxone.png">
     <h4>Xbox One (2013)</h4>
 </a>
 
 </main>
 
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
 
-<!-- FILTER SCRIPT -->
+<!-- SCRIPT -->
 <script>
+const searchBar = document.getElementById("searchBar");
 const checkboxes = document.querySelectorAll('.filters input');
-const cards = document.querySelectorAll('.game-card');
+const cards = document.querySelectorAll(".game-card");
 
-checkboxes.forEach(cb => {
-    cb.addEventListener('change', filterCards);
-});
+const modal = document.getElementById("modal");
+const modalBody = document.getElementById("modalBody");
+const closeBtn = document.getElementById("closeModal");
 
-function filterCards() {
+// FILTER + SEARCH + RENDER
+function updateCards() {
+    const query = searchBar.value.toLowerCase();
 
     const activeFilters = Array.from(checkboxes)
         .filter(cb => cb.checked)
         .map(cb => cb.value);
 
     cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
 
-        if (activeFilters.length === 0) {
-            card.style.display = "block";
-            return;
-        }
+        const matchesSearch = text.includes(query);
 
-        const matchesAllFilters = activeFilters.every(filter =>
-            card.classList.contains(filter)
-        );
+        const matchesFilters =
+            activeFilters.length === 0 ||
+            activeFilters.every(f => card.classList.contains(f));
 
-        card.style.display = matchesAllFilters ? "block" : "none";
+        const visible = matchesSearch && matchesFilters;
+
+        card.style.display = visible ? "block" : "none";
     });
 }
+
+// EVENTS
+searchBar.addEventListener("input", updateCards);
+checkboxes.forEach(cb => cb.addEventListener("change", updateCards));
+
+// MODAL
+cards.forEach(card => {
+    card.addEventListener("click", (e) => {
+        if (card.style.display === "none") return;
+
+        e.preventDefault();
+
+        modalBody.innerHTML = `
+            <img src="${card.dataset.img}" style="width:100%; border-radius:10px;">
+            <h2>${card.dataset.title}</h2>
+        `;
+
+        modal.classList.remove("hidden");
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.add("hidden");
+    }
+});
+// MODAL
+cards.forEach(card => {
+    card.addEventListener("click", (e) => {
+        if (card.style.display === "none") return;
+
+        e.preventDefault();
+
+        const title = card.dataset.title || "Unknown Item";
+        const img = card.dataset.img || "";
+        const price = card.dataset.price || "N/A";
+        const desc = card.dataset.desc || "No description available.";
+
+        modalBody.innerHTML = `
+            <img src="${img}" style="width:100%; border-radius:10px; margin-bottom:10px;">
+            
+            <h2>${title}</h2>
+            
+            <p style="margin:8px 0; font-size:18px;">
+                <strong>Price:</strong> ${price}
+            </p>
+
+            <p style="margin:10px 0;">
+                ${desc}
+            </p>
+
+            <button id="orderBtn" style="
+                margin-top: 10px;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 8px;
+                background: #2ecc71;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            ">
+                🛒 Order Now
+            </button>
+        `;
+
+        modal.classList.remove("hidden");
+
+        // fake button action
+        setTimeout(() => {
+            const btn = document.getElementById("orderBtn");
+            btn.addEventListener("click", () => {
+                alert("Order placed!");
+            });
+        }, 0);
+    });
+});
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const item = params.get("item");
+
+    if (!item) return;
+
+    const targetCard = document.getElementById(item);
+    if (!targetCard) return;
+
+    // trigger modal open
+    const title = targetCard.dataset.title;
+    const img = targetCard.dataset.img;
+    const price = targetCard.dataset.price;
+    const desc = targetCard.dataset.desc;
+
+    modalBody.innerHTML = `
+        <img src="${img}" style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h2>${title}</h2>
+        <p><strong>Price:</strong> ${price}</p>
+        <p>${desc}</p>
+
+        <button id="orderBtn" style="
+            margin-top:10px;
+            padding:10px 15px;
+            border:none;
+            border-radius:8px;
+            background:#2ecc71;
+            color:white;
+            cursor:pointer;
+        ">
+            🛒 Order Now
+        </button>
+    `;
+
+    modal.classList.remove("hidden");
+
+    document.getElementById("orderBtn").addEventListener("click", () => {
+        alert("Order placed!");
+    });
+});
 </script>
 
 </body>

@@ -244,3 +244,104 @@ body {
 .big-text a:hover {
     color: #a7a7a7;
 }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#searchBar {
+    width: 60%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchBar:focus {
+    border-color: #666;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+}
+
+/* hide scrollbar but keep scroll */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* make cards behave nicely in row */
+.carousel .game-card {
+    min-width: 180px;
+    flex: 0 0 auto;
+    transition: transform 0.2s ease;
+}
+
+.carousel .game-card:hover {
+    transform: scale(1.05);
+}
+
+.carousel-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+}
+
+.carousel-scroll .game-card {
+    min-width: 200px;
+    flex: 0 0 auto;
+}

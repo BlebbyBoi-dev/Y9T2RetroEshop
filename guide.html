@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buying Guide</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.guide-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.guide-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    min-height: 150px;
+}
+
+h2 {
+    margin-top: 0;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-logo">Y9T2 Retro Eshop!</div>
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="guide.html">Buying Guide</a></li>
+        <li><a href="review.html">Reviews</a></li>
+    </ul>
+</nav>
+
+<div class="guide-container">
+
+    <h1>Buying Guide</h1>
+    <p>Select a console to view its buying guide 👇</p>
+
+    <select id="consoleSelect">
+        <option value="">-- Choose a Console --</option>
+
+        <option value="n64">Nintendo 64 (1996)</option>
+        <option value="ps2">PS2 (2000)</option>
+        <option value="wii">Wii (2006)</option>
+        <option value="gamecube">GameCube (2001)</option>
+    </select>
+
+    <div class="guide-box" id="guideBox">
+        <h2>Pick a console 👆</h2>
+        <p>Your buying guide will appear here.</p>
+    </div>
+
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+
+// Firebase setup
+const firebaseConfig = {
+  apiKey: "AIzaSyC24a_n-I26ggCNEFZIIEiCiF63o6I8_HU",
+  authDomain: "y9t2retroeshop.firebaseapp.com",
+  projectId: "y9t2retroeshop",
+  storageBucket: "y9t2retroeshop.firebasestorage.app",
+  messagingSenderId: "866674005263",
+  appId: "1:866674005263:web:866c2e4921cbccbc039a7a"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// DOM
+const select = document.getElementById("consoleSelect");
+const box = document.getElementById("guideBox");
+
+// helper
+function setLoading() {
+    box.innerHTML = `<h2>Loading...</h2>`;
+}
+
+// main listener
+select.addEventListener("change", async () => {
+    const value = select.value;
+
+    if (!value) {
+        box.innerHTML = `<h2>Pick a console 👆</h2>`;
+        return;
+    }
+
+    setLoading();
+
+    try {
+        const ref = doc(db, "guides", value);
+        const snap = await getDoc(ref);
+
+        if (!snap.exists()) {
+            box.innerHTML = `<h2>No guide found...</h2>`;
+            return;
+        }
+
+        const data = snap.data();
+
+        box.innerHTML = `
+            <h2>${data.title}</h2>
+            <div>${data.content}</div>
+        `;
+
+    } catch (err) {
+        console.error(err);
+        box.innerHTML = `<h2>Error loading guide</h2>`;
+    }
+});
+</script>
+
+</body>
+</html>
