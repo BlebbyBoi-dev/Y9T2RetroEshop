@@ -1,0 +1,347 @@
+/* =========================
+   RESET + BASE STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* top nav links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 0 15px;
+    position: relative; /* important for dropdown */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* =========================
+   DROPDOWN MENU (MEGA STYLE)
+========================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+
+    top: 100%;   /* BELOW the button */
+    right: 0;    /* RIGHT EDGE aligns with button */
+
+    background: #333;
+    padding: 15px;
+
+    min-width: 650px;
+
+    flex-direction: row;
+    gap: 25px;
+
+    z-index: 999;
+}
+
+/* show dropdown */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* each console column */
+.dropdown-menu > li {
+    list-style: none;
+    padding: 0 15px;
+    min-width: 140px;
+    border-right: 2px solid #ffd700;
+}
+
+/* remove last border */
+.dropdown-menu > li:last-child {
+    border-right: none;
+}
+
+/* category title */
+.dropdown-menu > li > span {
+    color: gold;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* inner lists */
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 5px 0;
+}
+
+/* links inside dropdown */
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #ffd700;
+    background: #444;
+}
+
+/* =========================
+   HERO / IMAGE
+========================= */
+
+.darkened-image {
+    filter: brightness(40%);
+}
+
+/* =========================
+   STORE GRID (optional pages)
+========================= */
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+@media (max-width: 1400px) {
+    .store-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .store-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .store-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .store-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   GAME CARDS
+========================= */
+
+.game-card {
+    background: white;
+    padding: 10px;
+    border-radius: 14px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.game-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+}
+
+.game-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* HERO WRAPPER */
+.hero-container {
+    position: relative;
+    width: 100%;
+}
+
+/* IMAGE */
+.hero-container img {
+    width: 100%;
+    display: block;
+}
+
+/* BIG TEXT OVER IMAGE */
+.big-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* LINK INSIDE TITLE */
+.big-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.big-text a:hover {
+    color: #a7a7a7;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#searchBar {
+    width: 60%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchBar:focus {
+    border-color: #666;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+}
+
+/* hide scrollbar but keep scroll */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* make cards behave nicely in row */
+.carousel .game-card {
+    min-width: 180px;
+    flex: 0 0 auto;
+    transition: transform 0.2s ease;
+}
+
+.carousel .game-card:hover {
+    transform: scale(1.05);
+}
+
+.carousel-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+}
+
+.carousel-scroll .game-card {
+    min-width: 200px;
+    flex: 0 0 auto;
+}
